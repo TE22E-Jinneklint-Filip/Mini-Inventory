@@ -1,6 +1,11 @@
 public class Weapon extends Item {
-    int minDamage = 10;
-    int maxDamage = 100;
+    public int minDamage = 0;
+    public int maxDamage = 0;
+
+    public Weapon(String name, int maxDamage) {
+        this.name = name;
+        this.maxDamage = maxDamage;
+    }
 
     public int Attack() {
         return (int) (Math.random() * (maxDamage - minDamage)) + minDamage;
